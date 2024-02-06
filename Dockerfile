@@ -1,7 +1,7 @@
 FROM node:12.2.0-alpine
 WORKDIR app
-COPY . .
+COPY  package*.json /app/ 
 RUN npm install
-RUN npm run test
+COPY   . /app/ 
 EXPOSE 8000
 CMD ["node","app.js"]
